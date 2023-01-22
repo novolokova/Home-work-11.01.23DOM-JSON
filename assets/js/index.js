@@ -10,6 +10,5 @@ fetch("./assets/js/data.json")
     cardsContainer.append(...actorCardsHTML);
   })
   .catch((error) => {
-
-    console.log(error);
+    errorMessage();
   });

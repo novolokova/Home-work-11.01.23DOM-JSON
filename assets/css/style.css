@@ -84,7 +84,6 @@ h1 {
   object-fit: cover;
   object-position: top;
   border-radius: 50%;
-
 }
 
 .cardName {
@@ -97,12 +96,10 @@ h1 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-
 }
 
 .cardItem {
   margin: 0 2px;
-
 }
 
 .icon {
@@ -147,4 +144,14 @@ h1 {
   background-position: center;
   border-radius: 50%;
   background-color: rgb(245, 114, 114);
+}
+
+.errorMess{
+  width: 80%;
+  height: 175px;
+  margin: auto;
+  background-image: url(../images/404-not-found.jpg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
 }

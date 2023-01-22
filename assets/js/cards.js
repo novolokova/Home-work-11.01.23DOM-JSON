@@ -33,9 +33,8 @@ function createCard(actor) {
           actor.firstName + " " + actor.lastName || "not a name"
         )
       ),
-
-        createLinks(actor.contacts),
-           // createA(actor.contacts)// second second option to create social icons
+      createLinks(actor.contacts)
+      // createA(actor.contacts)// second option to create social icons
     )
   );
 }
