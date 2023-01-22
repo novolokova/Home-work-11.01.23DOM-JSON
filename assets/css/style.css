@@ -1,5 +1,6 @@
 :root {
-  --photo-size: 120px;
+  --photo-size: 100px;
+  --card-size: 190px;
   font-size: 14px;
 }
 
@@ -20,54 +21,41 @@ a {
 ul {
   list-style: none;
 }
-section{
-  position: relative;
-  width: 100%;
-  /* height: 100vh; */
-}
 
-.background{
+section {
   width: 100%;
-  height: 50%;
-}
-
-.bg-gray{
-  height: 40%;
-  background-color: rgb(230, 225, 225);
-}
-.bg-red{
-  height: 60%;
-  background-color: rgb(245, 114, 114);
+  background-color: rgb(228, 224, 224);
+  background-image: linear-gradient(rgb(248, 234, 234), rgb(245, 114, 114));
 }
 
 .cardsContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  
+
+  width: 70%;
+  margin: auto;
 }
 
 h1,
-.choice{
+.choice {
   font-size: 20px;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
   color: rgb(245, 114, 114);
 }
-h1{
+
+h1 {
   padding-top: 30px;
 }
+
 .cardWrapper {
+  width: var(--card-size);
+  height: var(--card-size);
   margin: 1rem;
   padding: 2px;
-  /* border: 2px solid #ccc; */
-  background-color: rgb(138, 132, 132)
+  background-color: #fff;
 }
 
 .cardContainer {
@@ -78,66 +66,85 @@ h1{
   width: var(--photo-size);
   height: var(--photo-size);
   position: relative;
+  margin: auto;
 }
 
 .cardPhotoWrapper>* {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
+ 
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
 }
-.cardWrapperItems{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
- 
-}
-.cardItem{
-  background-color:rgb(245, 114, 114);
-border-radius: 50%;
-}
-.item{
-  width: 30px;
- 
-}
-
-.wrap-list{
-  width: 80%;
-    padding-top: 180px;
-  margin: auto;
-  text-align: center;
-
-}
-.choice{
-  width: 100%;
-  background-color:rgb(230, 225, 225);
-}
-
-/* .cardInitial {
-  width: 150px;
-  height: 150px;
-  margin: auto;
-  padding-top: 50px;
-  
-  font-size: 2.5rem;
-  font-weight: 700;
-  border-radius: 50%;
-  background-color: rgb(214, 95, 204);
-  color: aliceblue;
-
-} */
 
 .cardPhoto {
   object-fit: cover;
   object-position: top;
-  border-radius: 50%
+  border-radius: 50%;
+
 }
 
-.cardName
- {
+.cardName {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
+  font-size: initial;
+}
+
+.cardWrapperItems {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+}
+
+.cardItem {
+  margin: 0 2px;
+
+}
+
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgb(245, 114, 114);
+}
+
+.fb-icon {
+  background-image: url(../images/icons-facebook.svg);
+}
+
+.tw-icon {
+  background-image: url(../images/icons-twitter.svg);
+}
+
+.inst-icon {
+  background-image: url(../images/icons-instagram.svg);
+}
+
+.wrap-list {
+  width: 80%;
+  padding: 20px 0 50px 0;
+  margin: auto;
+  text-align: center;
+}
+
+.choice {
+  width: 100%;
+  background-color: rgb(230, 225, 225);
+}
+
+.cardInitial {
+  background-image: url(../images/no-image-found.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  border-radius: 50%;
+  background-color: rgb(245, 114, 114);
 }

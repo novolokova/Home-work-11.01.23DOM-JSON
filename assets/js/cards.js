@@ -15,11 +15,14 @@ function createCard(actor) {
       createElement(
         "div",
         { classNames: ["cardPhotoWrapper"] },
+        createElement("div", { classNames: ["cardInitial"] }),
         createElement("img", {
           classNames: ["cardPhoto"],
+          listeners: { error: handlerImageError, load: handlerImageLoad },
           attrs: {
             src: actor.profilePicture,
             alt: actor.firstName + " " + actor.lastName,
+            hidden: true,
           },
         })
       ),
@@ -30,7 +33,9 @@ function createCard(actor) {
           actor.firstName + " " + actor.lastName || "not a name"
         )
       ),
-      createA(actor.contacts)
+
+        createLinks(actor.contacts),
+           // createA(actor.contacts)// second second option to create social icons
     )
   );
 }
